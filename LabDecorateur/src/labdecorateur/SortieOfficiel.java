@@ -17,7 +17,7 @@ public class SortieOfficiel implements ISortie
     @Override
     public void ecrire(String txt) 
     {
-        
+        System.out.println(txt);
     }
     
 }

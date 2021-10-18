@@ -12,13 +12,19 @@ import labdecorateur.Interfaces.ISortie;
  *
  * @author etudiant
  */
-public class DecorateurCommande implements ICommande
+public abstract class DecorateurCommande implements ICommande
 {
+    private ICommande commande;
+    
+    public DecorateurCommande(ICommande c)
+    {
+        commande = c;
+    }
 
     @Override
     public void executer(ISortie sortie) 
     {
-        
+        commande.executer(sortie);
     }
     
 }
